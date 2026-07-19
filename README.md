@@ -14,15 +14,42 @@ TabVault sits in your toolbar and lets you save any open tab as a task — with 
 
 ## Features
 
-- One right-click to save any tab or link
-- Due dates with overdue detection
-- Priority tags P1 / P2 / P3
-- Live task count badge on toolbar icon
-- Inline editing of any saved task
-- Weekly nudge notification for unfinished tasks
-- Light mode / Dark mode / Auto
-- Export all tasks as JSON or CSV
-- 100% local storage — no account, no server, no tracking
+- **One right-click save** — Save any tab 
+  or link as a task in under 2 seconds
+- **Due dates** — Set deadlines, see 
+  overdue tasks highlighted in red
+- **Smart sorting** — Overdue tasks 
+  automatically rise to the top
+- **Priority tags** — Mark tasks P1, 
+  P2, or P3 with color-coded dots
+- **Live badge count** — Toolbar icon 
+  shows active task count. Turns red 
+  when tasks are overdue
+- **Inline editing** — Edit title, note, 
+  or due date directly in the popup
+- **Real-time search** — Filter by title, 
+  note, or domain instantly
+- **Weekly nudge** — Optional Monday 
+  morning reminder for unfinished tasks
+- **Light / Dark / Auto theme** — Follows 
+  your system or set manually
+- **Export** — Download all tasks as 
+  JSON or CSV anytime
+- **100% local** — No account, no server, 
+  no tracking. Ever.
+
+## Architecture
+
+TabVault is built entirely on Chrome 
+Extensions Manifest V3:
+
+src/
+├── storage.js   # chrome.storage CRUD operations
+├── task.js      # Task model and due date logic
+├── badge.js     # Toolbar badge management
+├── search.js    # Real-time search and filtering
+├── nudge.js     # Weekly alarm notifications
+└── export.js    # JSON and CSV export
 
 ## Privacy
 
